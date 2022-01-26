@@ -4,30 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="100dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/edtText"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello world"
         android:layout_centerInParent="true"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        android:textColor="#1dd13c"
-        android:id="@+id/helloTxt"
-        ></TextView>
+        android:hint="Enter your name"
+        android:lines="2" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Say My name"
-        android:layout_below="@id/helloTxt"
+        android:layout_centerInParent="true"
+        android:text="Click Me"
+        android:id="@+id/sayHello"
+        android:onClick="onClick"
+        android:layout_below="@+id/edtText"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"></Button>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:background="#FF000000"
-        android:onClick="onHello"
-        >
-    </Button>
+        android:text="Hello"
+        android:layout_below="@+id/sayHello"
+        android:id="@+id/txtView"
+        android:layout_marginTop="30dp"
+        android:textSize="20dp"></TextView>
+
+
 
 
 </RelativeLayout>
